@@ -711,44 +711,44 @@ class InventarioApp:
             return
         self.llenar_tabla(df_filtrado)
 
-if __name__ == "__main__":
-    import threading
-    from flask import Flask, request, jsonify, send_from_directory
-    import gspread
-    from oauth2client.service_account import ServiceAccountCredentials
+from flask import Flask, request, jsonify, send_from_directory, render_template
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+import os
 
-    # --- Configuración Google Sheets ---
+app = Flask(__name__, static_folder=".", template_folder=".")
+
+# Ruta principal: sirve tu HTML
+@app.route("/")
+def index():
+    return send_from_directory('.', 'index.html')
+
+# Ruta para productos.json
+@app.route("/productos.json")
+def productos_json():
+    return send_from_directory('.', 'productos.json')
+
+# Ruta para actualizar stock
+@app.route("/actualizar_stock", methods=["POST"])
+def actualizar_stock():
+    data = request.get_json()
+    codigo = data.get("codigo")
+    nuevo_stock = data.get("nuevoStock")
+
     scope = ["https://spreadsheets.google.com/feeds","https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name("credenciales.json", scope)
     client = gspread.authorize(creds)
     sheet = client.open("inventario_infopar").sheet1
 
-    # --- Crear servidor Flask ---
-    app = Flask(__name__, static_folder='.')  # '.' porque tus archivos están en la misma carpeta
+    all_codes = sheet.col_values(1)
+    if codigo in all_codes:
+        fila = all_codes.index(codigo) + 1
+        sheet.update_cell(fila, 6, str(nuevo_stock))
+        return jsonify({"status":"ok","fila":fila,"nuevoStock":nuevo_stock})
+    else:
+        return jsonify({"status":"error","message":"Código no encontrado"}), 404
 
-    # Servir la página principal
-    @app.route('/')
-    def index():
-        return send_from_directory('.', 'index.html')  # abre tu HTML principal
-
-    # Servir cualquier archivo estático (imagenes, JS, CSS)
-    @app.route('/<path:filename>')
-    def static_files(filename):
-        return send_from_directory('.', filename)
-
-    # Ruta para actualizar stock
-    @app.route("/actualizar_stock", methods=["POST"])
-    def actualizar_stock():
-        data = request.get_json()
-        codigo = data.get("codigo")
-        nuevo_stock = data.get("nuevoStock")
-        all_codes = sheet.col_values(1)
-        if codigo in all_codes:
-            fila = all_codes.index(codigo) + 1
-            sheet.update_cell(fila, 6, str(nuevo_stock))
-            return jsonify({"status":"ok","fila":fila,"nuevoStock":nuevo_stock})
-        else:
-            return jsonify({"status":"error","message":"Código no encontrado"}), 404
-
-    # --- Iniciar Flask ---
-    app.run(host="0.0.0.0", port=5000)
+# Puerto asignado por Render
+port = int(os.environ.get("PORT", 5000))
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=port)
