@@ -267,7 +267,7 @@ function modificarStock(index, cambio) {
   stockSpan.textContent = nuevoStock;
 
   // --- enviar cambio a tu servidor o inventario.py ---
-  fetch(`/actualizar_stock`, {
+  fetch('https://inventario-web-25k0.onrender.com/actualizar_stock', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify({codigo: productos[index].Código, nuevoStock: nuevoStock})

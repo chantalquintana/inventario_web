@@ -713,7 +713,7 @@ class InventarioApp:
 
 if __name__ == "__main__":
     import threading
-    from flask import Flask, request, jsonify
+    from flask import Flask, request, jsonify, send_from_directory
     import gspread
     from oauth2client.service_account import ServiceAccountCredentials
 
@@ -724,8 +724,19 @@ if __name__ == "__main__":
     sheet = client.open("inventario_infopar").sheet1
 
     # --- Crear servidor Flask ---
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='.')  # '.' porque tus archivos están en la misma carpeta
 
+    # Servir la página principal
+    @app.route('/')
+    def index():
+        return send_from_directory('.', 'index.html')  # abre tu HTML principal
+
+    # Servir cualquier archivo estático (imagenes, JS, CSS)
+    @app.route('/<path:filename>')
+    def static_files(filename):
+        return send_from_directory('.', filename)
+
+    # Ruta para actualizar stock
     @app.route("/actualizar_stock", methods=["POST"])
     def actualizar_stock():
         data = request.get_json()
