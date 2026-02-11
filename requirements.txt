@@ -5,4 +5,5 @@ gspread
 oauth2client
 openpyxl
 flask
+gunicorn
 
