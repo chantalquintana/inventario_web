@@ -64,6 +64,13 @@ def actualizar_stock():
 def imagenes(filename):
     return send_from_directory(os.path.join(BASE_DIR, "imagenes"), filename)
 
+# -------------------------------
+# Servir archivos sueltos desde la raíz (como logo_infopar.png)
+# -------------------------------
+@app.route("/<path:filename>")
+def raiz(filename):
+    return send_from_directory(BASE_DIR, filename)
+
 
 # -------------------------------
 # Render usa este puerto
