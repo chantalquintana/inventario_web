@@ -270,7 +270,7 @@ function modificarStock(index, cambio) {
   fetch('https://inventario-web-25k0.onrender.com/actualizar_stock', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({codigo: productos[index].Código, nuevoStock: nuevoStock})
+    body: JSON.stringify({codigo: productos[index].Código, existencias: nuevoStock})
   }).then(res => res.json())
     .then(data => console.log('Stock actualizado', data))
     .catch(err => console.error('Error actualizando stock', err));
