@@ -1,17 +1,5 @@
 [
     {
-        "codigo": "R91RP5",
-        "nombre": "Almohadilla Epson",
-        "descripcion": "ET2700 ET4700 M1120 M1140 M1180 M2140 M3140 M3180 WF2800",
-        "precio_compra": 0,
-        "precio_venta": 100000,
-        "stock": 3,
-        "vendidos": 3,
-        "ganancia": 300000,
-        "inversion": 0,
-        "imagen": "imagenes/R91RP5.png"
-    },
-    {
         "codigo": "INO44L",
         "nombre": "Almohadilla Epson",
         "descripcion": "L110 L111 L120 L121 L130 L132 L210 L211 L220 L222 L300 L301 L303 L310 L312 L313 L335 L350 L351 L353 L355 L358 L360 L361 L362 L363 L364 L365 L366 L375 L380 L381 L382 L383 L385 L386 L395 L396 L400 L405 L455 L456 L475 L485 L486 ME10 ME101 ME303 ME401 ET2500 ET2550 ET2600 ET2650 TX235W TX430W SX230 SX235W SX430W SX435W SX440W SX445W XP30 XP33 XP100 XP102 XP103 XP200 XP201 XP202 XP203 XP204 XP205 XP206 XP207 XP208 XP210 XP211 XP212 XP213 XP214 XP215 XP216 XP217 XP225 XP231 XP235 XP240 XP241 XP242 XP243 XP245 XP247 XP300 XP301 XP302 XP303 XP305 XP306 XP310 XP312 XP313 XP315 XP322 XP323 XP325 XP330 XP332 XP333 XP335 XP340 XP343 XP344 XP345 XP400 XP401 XP402 XP403 XP405 XP406 XP410 XP411 XP412 XP413 XP415 XP420 XP422 XP423 XP425 XP430 XP431 XP432 XP434 XP435 XP440 XP441 XP442 XP445 XP446 XP452 XP2100 XP2105 XP2150 XP2155",
@@ -729,7 +717,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 0,
-        "imagen": "imagenes/film fusor HP 5200.png"
+        "imagen": "imagenes/filmfusorHp5200.png"
     },
     {
         "codigo": "MJKH1J",
@@ -777,7 +765,7 @@
         "vendidos": 12,
         "ganancia": 720000,
         "inversion": 0,
-        "imagen": "imagenes/fil de fusor amarillo HP P1102.png"
+        "imagen": "imagenes/filmfusoramarilloHP1102.png"
     },
     {
         "codigo": "QZMWMK",
@@ -789,7 +777,7 @@
         "vendidos": 3,
         "ganancia": 330000,
         "inversion": 400000,
-        "imagen": "imagenes/fil fusor del medio hp m477.png"
+        "imagen": "imagenes/filmdefusordelmediohpm477.png"
     },
     {
         "codigo": "EUG3NX",
@@ -813,7 +801,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 375000,
-        "imagen": "imagenes/film de fusor ricoh c3300.png"
+        "imagen": "imagenes/filmdefusorRicohC3300.png"
     },
     {
         "codigo": "XNFKAQ",
@@ -825,7 +813,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 450000,
-        "imagen": "imagenes/film de fusor hp cp1025.png"
+        "imagen": "imagenes/filmdefusorhpcp1025.png"
     },
     {
         "codigo": "T2DX9Z",
@@ -849,7 +837,7 @@
         "vendidos": 5,
         "ganancia": 275000,
         "inversion": 80000,
-        "imagen": "imagenes/grasa para fusor 20gr.png"
+        "imagen": "imagenes/grasaparafusor20gr.png"
     },
     {
         "codigo": "AOYH13",
@@ -861,7 +849,7 @@
         "vendidos": 5,
         "ganancia": 375000,
         "inversion": 0,
-        "imagen": "imagenes/grasa para fusor 15gr.png"
+        "imagen": "imagenes/grasaparafusor15gr.png"
     },
     {
         "codigo": "M2IJF1",
@@ -873,7 +861,7 @@
         "vendidos": 9,
         "ganancia": 1350000,
         "inversion": 0,
-        "imagen": "imagenes/grasa para fusor hp original.png"
+        "imagen": "imagenes/grasaparafusorhporiginal.png"
     },
     {
         "codigo": "QHYH50",
@@ -885,7 +873,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 0,
-        "imagen": "imagenes/guantes con luz led.png"
+        "imagen": "imagenes/guantesconluzled.png"
     },
     {
         "codigo": "H1R39U",
@@ -897,7 +885,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 0,
-        "imagen": "imagenes/goma separdor de bandeja samsung.png"
+        "imagen": "imagenes/gomasepardorde bandejasamsung.png"
     },
     {
         "codigo": "AVWLLD",
@@ -909,7 +897,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 0,
-        "imagen": "imagenes/kit de reparo placa Epson.png"
+        "imagen": "imagenes/kitdereparoplacaEpson.png"
     },
     {
         "codigo": "9MXYL2",
@@ -921,7 +909,7 @@
         "vendidos": 4,
         "ganancia": 400000,
         "inversion": 120000,
-        "imagen": "imagenes/luz led romantica.png"
+        "imagen": "imagenes/luzledromantica.png"
     },
     {
         "codigo": "8RLBN2",
@@ -933,7 +921,7 @@
         "vendidos": 53,
         "ganancia": 238500,
         "inversion": 492500,
-        "imagen": "imagenes/8RLBN2.png"
+        "imagen": "imagenes/ledconbase3volt.png"
     },
     {
         "codigo": "94EXRO",
@@ -945,7 +933,7 @@
         "vendidos": 16,
         "ganancia": 72000,
         "inversion": 210000,
-        "imagen": "imagenes/led con base 6volt.png"
+        "imagen": "imagenes/ledconbase6volt.png"
     },
     {
         "codigo": "JZT1M4",
@@ -957,7 +945,7 @@
         "vendidos": 2,
         "ganancia": 360000,
         "inversion": 0,
-        "imagen": "imagenes/motor para contador de billete.png"
+        "imagen": "imagenes/motorparacontadordebillete.png"
     },
     {
         "codigo": "0R6098",
@@ -981,7 +969,7 @@
         "vendidos": 6,
         "ganancia": 600000,
         "inversion": 0,
-        "imagen": "imagenes/rodillo de separacion epson l3110.png"
+        "imagen": "imagenes/rodillodeseparacionepsonl3110.png"
     },
     {
         "codigo": "CUFR7F",
@@ -993,7 +981,7 @@
         "vendidos": 0,
         "ganancia": 0,
         "inversion": 58500,
-        "imagen": "imagenes/rodillo de recogida de papel  RM1-1497-000 P1505.png"
+        "imagen": "imagenes/rodilloderecogidadepapel RM11497000paraP1505.png"
     },
     {
         "codigo": "EKSN87",
