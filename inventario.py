@@ -57,6 +57,13 @@ def actualizar_stock():
 
     return {"ok": True}
 
+# -------------------------------
+# Servir carpeta "imagenes" desde la raíz
+# -------------------------------
+@app.route("/imagenes/<path:filename>")
+def imagenes(filename):
+    return send_from_directory(os.path.join(BASE_DIR, "imagenes"), filename)
+
 
 # -------------------------------
 # Render usa este puerto
